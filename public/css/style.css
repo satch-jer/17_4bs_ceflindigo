@@ -1,0 +1,301 @@
+/* -- import google fonts -- */
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700,900';
+
+/* -- display nones --*/
+#searchResultForm_message{
+    display: none;
+}
+
+/* -- default body style -- */
+html, body{
+    background: #ffffff;
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+    color: #333;
+    font-size: 14px;
+}
+
+/* -- basic elements -- */
+h1{
+    display: inline-block;
+    font-weight: 900;
+    font-variant: small-caps;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #333;
+}
+
+.outer_wrapper{
+    border-top: 1px solid #F0F0F0;
+}
+
+.inner_wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#searchResultForm, #searchResult_aroundTable, #searchResult_geenResultaat, #searchResult_nietsIngegeven{
+    background-color: #fff;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#searchResult_aroundTable, #searchResult_geenResultaat, #searchResult_nietsIngegeven{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: none;
+}
+
+/* -- login page index.php -- */
+#loginPage_divContainer{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginPage_divForm{
+    padding: 100px 50px;
+    border: 1px solid #F0F0F0;
+    width: 50vh;
+    max-width: 960px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#loginForm_errorMessage, #searchResultForm_message{
+    margin-top: 25px;
+    font-size: 13px;
+    font-weight: 900;
+    color: red;
+}
+
+/* -- navigation header -- */
+header{
+    border-bottom: 1px solid #F0F0F0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:100;
+    height: 325px;
+    background-color: #fff;
+}
+
+.container{
+    margin-top: 325px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    max-width:960px;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+nav a{
+    flex-grow: 1;
+    flex-basis: 0;
+    color: #333333;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.nav_logo{
+    font-weight: 900;
+    text-align: center;
+}
+
+.nav_logout{
+    font-weight: 400;
+    text-align: right;
+}
+
+/* -- table styling -- */
+table {
+    max-width:960px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th {
+    background: #ffffff;
+    font-weight: 900;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+
+/* -- form styling -- */
+input, select {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.searchResultForm_divGroup{
+    display: flex;
+    flex-direction: row;
+    max-width:960px;
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid #f0f0f0;
+    border-spacing: 1px;
+}
+
+.searchResultForm_divGroup label{
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: left;
+    padding: 10px;
+    font-weight: 700;
+}
+
+.searchResultForm_divGroup input, #searchResultForm_selectNplDeleted{
+    flex-grow: 2;
+    flex-basis: 0;
+    border: 0 !important;
+    background-color: #FFFFFF;
+}
+
+input[type="text"], input[type="password"], select{
+    /* remove iphone styling */
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #cdcdcd;
+    width: 75%;
+    border-radius: 5px;
+}
+
+.searchResultForm_inputDisabled{
+    color: #333;
+}
+
+input[type="submit"]{
+    /* remove iphone styling */
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    min-width: 100px;
+    width: 50%;
+    padding: 10px;
+    background:none;
+    background-color: #cdcdcd;
+    border:none;
+    font-size:1em;
+    color: #FFF;
+    border-radius: 5px;
+    font-weight: 700;
+
+    /* extra spacing */
+    margin-top: 15px;
+
+    /* css3 animation */
+    -webkit-transition: background-color 0.2s ease-in;
+}
+
+button, #searchResultForm_submitUpdate, #searchResultForm_buttonEdit, #searchResultForm_buttonNew, #searchResultForm_submitNew{
+    /* remove iphone styling */
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    width: 20%;
+    padding: 10px;
+    background:none;
+    background-color: #cdcdcd;
+    border: 1px solid #cdcdcd;
+    font-size:1em;
+    color: #FFF;
+    border-radius: 5px;
+    font-weight: 700;
+
+    /* extra spacing */
+    margin-top: 15px;
+
+    /* css3 animation */
+    -webkit-transition: background-color 0.2s ease-in, color 0.2s ease-in, border 0.2s ease-in;
+}
+
+    input[type="submit"]:hover, button:hover, #searchResultForm_submitUpdate:hover,
+    #searchResultForm_buttonEdit:hover, #searchResultForm_buttonNew:hover, #searchResultForm_submitNew:hover{
+        background-color: #333;
+        color: #FFFFFF;
+        border: 1px solid #333;
+    }
+
+    #searchResultForm_submitUpdate, #searchResultForm_submitNew{
+        display: none;
+    }
+
+    textarea:focus, input:focus,
+    textarea:active, input:active{
+        outline: none;
+    }
+
+#searchResult_geenResultaat, #searchResult_nietsIngegeven, #searchResultForm{
+    display: none;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* foreer tables om geen tables meer te zijn */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* verberg table headers, maar niet display none (accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #f0f0f0;
+        border-collapse: collapse;
+    }
+
+    td {
+        /* gedraag je als een rij */
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* gedraag je nu als een header */
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 700;
+    }
+
+    /* label the data */
+    td:nth-of-type(1):before { content: "Plaque"; }
+    td:nth-of-type(2):before { content: "Marque"; }
+    td:nth-of-type(3):before { content: "Chauffeur"; }
+    td:nth-of-type(4):before { content: "Entreprise"; }
+}
